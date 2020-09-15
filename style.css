@@ -1,0 +1,208 @@
+ @font-face {
+    src: url(/Fonts/Pokemon\ Solid.ttf);
+    font-family: Pokemon Solid;
+    
+} 
+
+html, body {
+    height: 100%; 
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Pokemon Solid;
+    color: black;
+    font-size: small;
+    letter-spacing: 0.1em;
+}
+
+body {
+    background-image: url(whosdat.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.container {
+    height: 100%; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    border-width: 2px;
+    border-radius: 10px;
+    height: 25px;
+    background-color: gold;
+    border-color: blue;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+    cursor: hover;
+    }
+    .btn:hover {
+        background-color: goldenrod;
+    }
+
+#userName {
+ border-width: 2px;
+ border-radius: 10px;
+ height: 25px;
+ border-color: blue;
+ opacity: 0.5;
+
+}
+
+
+.box-box {
+    height: 450px;
+    width: 350px;
+    margin-left: 250px;
+    border-radius: 8px;
+    padding: 16px;
+    
+}
+#firstPage {
+    background-color: rgba(194, 11, 11, 0.678);
+    border: 3px solid blue;
+}
+#normalGroup {
+    background-color: rgba(105, 105, 105, 0.63);
+    border: 3px solid blue;
+    display: none;
+}
+#normalGroup2 {
+    background-color: rgba(105, 105, 105, 0.63);
+    border: 3px solid blue;
+    display: none;
+}
+#normalGroup3{
+    background-color: rgba(105, 105, 105, 0.63);
+    border: 3px solid blue;
+    display: none;
+}
+#eevee {
+    width: 75%;
+   
+}
+#jigglypuff{
+    width: 75%;
+}
+#snorlax{
+    width: 75%;
+}
+#result1{
+    background-color: rgba(105, 105, 105, 0.63);
+    border: 3px solid blue;
+    display: none;
+}
+#electricGroup{
+    background-color: #ffc83c69;
+    border: 3px solid blue;
+    display: none;
+}
+#elekid{
+    width: 75%;
+}
+#electricGroup2{
+    background-color: #ffc83c69;
+    border: 3px solid blue;
+    display: none;
+}
+#raichu{
+    width: 75%;
+}
+#electricGroup3{
+    background-color: #ffc83c69;
+    border: 3px solid blue;
+    display: none;
+}
+#jolteon{
+    width: 75%;
+}
+#result2{
+    background-color: #ffc83c69;
+    border: 3px solid blue;
+    display: none;
+}
+#grassGroup{
+    background-color: #80b21475;
+    border: 3px solid blue;
+    display: none;
+}
+#victreebel{
+    width: 75%;  
+}
+#grassGroup2{
+    background-color: #80b21475;
+    border: 3px solid blue;
+    display: none;
+}
+#vileplume{
+    width: 75%; 
+}
+#grassGroup3{
+    background-color: #80b21475;
+    border: 3px solid blue;
+    display: none;
+}
+#oddish{
+    width: 75%; 
+}
+#result3{
+    background-color: #80b21475;
+    border: 3px solid blue;
+    display: none;  
+}
+.typeBtn {
+  display: inline-block;
+  padding: 15px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999; 
+  
+}
+.typeBtn:hover {background-color: #3e8e41}
+
+.typeBtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+
+.btnNext{
+      -ms-transform: translate(200%, 200%);
+      transform: translate(200%, 200%);
+      border-width: 2px;
+      border-radius: 10px;
+      height: 25px;
+      background-color: gold;
+      border-color: blue;
+      color: blue;
+      font-weight: bold;
+      cursor: pointer;
+      cursor: hover;
+    }
+.backBtn {
+    -ms-transform: translate(200%, 200%);
+    transform: translate(200%, 200%);
+    border-width: 2px;
+    border-radius: 10px;
+    height: 25px;
+    background-color: gold;
+    border-color: blue;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+    cursor: hover;  
+}
+    

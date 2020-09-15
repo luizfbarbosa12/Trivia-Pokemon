@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Trivia</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+     
+
+        <div id="firstPage" class="box-box">
+            <h1>Who's that Pokémon?</h1>
+            <p>Treinador, qual é o seu nome?</p>
+            <input id="userName" type="text"  placeholder="Your Name">
+            <button class="btn" onclick="getUserName();"> GO!</button>
+            <p id="greetings"></p>
+            <blockquote>   Vamos testar seus conhecimentos em Pokémon.  Você precisa apenas 
+                adivinhar qual é o Pokémon de acordo com as silhuetas! <br>
+                Qual tipo de jogo você escolhe?
+            </blockquote>
+            <button class="typeBtn" style="background-color: grey;" onclick="switchScreens('firstPage', 'normalGroup')">Normal</button> 
+            <button class="typeBtn" style="background-color: #ffc93c;" onclick="switchScreens('firstPage', 'electricGroup')">Elétrico</button> 
+            <button class="typeBtn" style="background-color: #81b214;" onclick="switchScreens('firstPage', 'grassGroup')">Grama </button> 
+    </div>
+    <div id="normalGroup" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="eevee" src="Silhouettes/eevee.png" alt="pokemon1"><br>
+        <form action="">
+        <input type="radio" id="pokemon1" name="normalType1" value="Farfetchd">
+        <label for="pokemon1">Farfetch'd</label><br>
+        <input type="radio" id="pokemon2" name="normalType1" value="spearow">
+        <label for="pokemon2">Spearow</label><br>
+        <input type="radio" id="pokemon3" name="normalType1" value="Eevee">
+        <label for="pokemon3">Eevee</label> <br>
+    </form>
+        <button class="btnNext" id="nextBtn" onclick=" switchScreens('normalGroup', 'normalGroup2'), getResultsNormal('normalType1', 'Eevee')" >NEXT</button>
+    </div>
+    <div id="normalGroup2" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="jigglypuff" src="Silhouettes/jigglypuff png.png" alt="pokemon2"><br>
+        <input type="radio" id="pokemon1" name="normalType2" value="Snorlax">
+        <label for="pokemon1">Snorlax</label><br>
+        <input type="radio" id="pokemon2" name="normalType2" value="Jigglypuff">
+        <label for="pokemon2">Jigglypuff</label><br>
+        <input type="radio" id="pokemon3" name="normalType2" value="Voltorb">
+        <label for="pokemon3">Voltorb</label> <br>
+      
+      <button class="btnNext" onclick="switchScreens('normalGroup2', 'normalGroup3'), getResultsNormal('normalType2', 'Jigglypuff')" >NEXT</button>
+    </div>
+    <div id="normalGroup3" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="snorlax" src="Silhouettes/snorlax png.png" alt="pokemon3"><br>
+        <input type="radio" id="pokemon1" name="normalType3" value="Snorlax">
+        <label for="pokemon1">Snorlax</label><br>
+        <input type="radio" id="pokemon2" name="normalType3" value="Abra">
+        <label for="pokemon2">Abra</label><br>
+        <input type="radio" id="pokemon3" name="normalType3" value="Smeargle">
+        <label for="pokemon3">Smeargle</label> <br>
+      
+      <button class="btnNext" onclick="switchScreens('normalGroup3', 'result1'), getResultsNormal('normalType3', 'Snorlax'), finalResultNormal()">NEXT</button>
+    </div>
+    <div id="result1" class="box-box">
+    <p id="result1.1">Você já é um mestre Pokémon!</p>
+    <button class="backBtn" onclick="switchScreens('result1', 'firstPage')">VOLTAR</button>
+    </div>
+    <div id="electricGroup" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="elekid" src="Silhouettes/elekid png.png" alt="pokemon1"><br>
+        <input type="radio" id="pokemon1" name="electricType" value="Onix">
+        <label for="pokemon1">Onix</label><br>
+        <input type="radio" id="pokemon2" name="electricType" value="Golem">
+        <label for="pokemon2">Golem</label><br>
+        <input type="radio" id="pokemson3" name="electricType" value="Elekid">
+        <label for="pokemon3">Elekid</label> <br>
+        <button class="btnNext" onclick="switchScreens('electricGroup', 'electricGroup2'), getResultsNormal('electricType', 'Elekid')" >NEXT</button>
+    </div>
+    <div id="electricGroup2" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="raichu" src="Silhouettes/raichu png.png" alt="pokemon2"><br>
+        <input type="radio" id="pokemon1" name="electricType" value="Pikachu">
+        <label for="pokemon1">Pikachu</label><br>
+        <input type="radio" id="pokemon2" name="electricType" value="Pichu">
+        <label for="pokemon2">Pichu</label><br>
+        <input type="radio" id="pokemson3" name="electricType" value="Raichu">
+        <label for="pokemon3">Raichu</label> <br>
+        <button class="btnNext" onclick="switchScreens('electricGroup2', 'electricGroup3'), getResultsNormal('electricType', 'Raichu')" >NEXT</button>
+    </div>
+    <div id="electricGroup3" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="jolteon" src="Silhouettes/jolteon png.png" alt="pokemon3"><br>
+        <input type="radio" id="pokemon1" name="electricType" value="Eevee">
+        <label for="pokemon1">Eevee</label><br>
+        <input type="radio" id="pokemon2" name="electricType" value="Flareon">
+        <label for="pokemon2">Flareon</label><br>
+        <input type="radio" id="pokemson3" name="electricType" value="Jolteon">
+        <label for="pokemon3">Jolteon</label> <br>
+        <button class="btnNext" onclick="switchScreens('electricGroup3', 'result2'), getResultsNormal('electricType', 'Jolteon'), finalResultElectric()" >NEXT</button>
+    </div>
+    <div id="result2" class="box-box">
+        <p id="result2.1">Você já é um mestre Pokémon!</p>
+        <button class="backBtn" onclick="switchScreens('result2', 'firstPage')">VOLTAR</button>
+        </div>
+    <div id="grassGroup" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="victreebel" src="Silhouettes/victreebel png.png" alt="pokemon1"><br>
+        <input type="radio" id="pokemon1" name="grassType" value="Weepingbell">
+        <label for="pokemon1">Weepingbell</label><br>
+        <input type="radio" id="pokemon2" name="grassType" value="Leafeon">
+        <label for="pokemon2">Leafeon</label><br>
+        <input type="radio" id="pokemson3" name="grassType" value="Victreebel">
+        <label for="pokemon3">Victreebel</label> <br>
+        <button class="btnNext" onclick="switchScreens('grassGroup', 'grassGroup2'), getResultsNormal('grassType', 'Victreebel')" >NEXT</button>
+
+    </div>
+    <div id="grassGroup2" class="box-box">
+        <p>Qual é este pokemon?</p>
+        <img id="vileplume" src="Silhouettes/vileplume png.png" alt="pokemon2"><br>
+        <input type="radio" id="pokemon1" name="grassType" value="Oddish">
+        <label for="pokemon1">Oddish</label><br>
+        <input type="radio" id="pokemon2" name="grassType" value="Spinarak">
+        <label for="pokemon2">Spinarak</label><br>
+        <input type="radio" id="pokemson3" name="grassType" value="Vileplume">
+        <label for="pokemon3">Vileplume</label> <br>
+        <button class="btnNext" onclick="switchScreens('grassGroup2', 'grassGroup3'), getResultsNormal('grassType', 'Vileplume')" >NEXT</button>
+    </div>
+    <div id="grassGroup3" class="box-box">
+<p>Qual é este pokemon?</p>
+<img id="oddish" src="Silhouettes/oddish png.png" alt="pokemon3"><br>
+<input type="radio" id="pokemon1" name="grassType" value="Oddish">
+        <label for="pokemon1">Oddish</label><br>
+        <input type="radio" id="pokemon2" name="grassType" value="Caterpie">
+        <label for="pokemon2">Caterpie</label><br>
+        <input type="radio" id="pokemson3" name="grassType" value="Snivy">
+        <label for="pokemon3">Snivy</label> <br>
+        <button class="btnNext" onclick="switchScreens('grassGroup3', 'result3'), getResultsNormal('grassType', 'Oddish'), finalResultGrass()" >NEXT</button>
+    </div>
+    <div id="result3" class="box-box">
+        <p id="result3.1">Você já é um mestre Pokémon!</p>
+        <button class="backBtn" onclick="switchScreens('result3', 'firstPage')">VOLTAR</button>
+        </div>
+</div>
+   <script src="app.js"></script>
+</body>
+</html>
